@@ -1,0 +1,74 @@
+
+
+.TimetableHeader{
+    width: 100%;
+    height: 18px;
+    background-color: grey;
+    flex-grow: 1;
+    flex-basis: 0;
+    text-align: left;
+    height: fit-content;
+
+    border-bottom: 1px solid black;
+}
+
+.TimetableHeaderContent{
+    font-size: small;
+    width: fit-content;
+    position: sticky;
+    user-select: none;
+    left: 6em;
+}
+
+.TimetableHeaderButton{
+    margin-right: 3em;
+    width: 2em;
+}
+.TimetableContent{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.RowWrapper{
+    align-items: stretch;
+    width: 100%;
+    transition: height 2s;
+    overflow: hidden;
+}
+
+
+
+.RowTitleWrapper{
+    height: 100%; 
+    z-index: 6;
+    width: calc(var(--rowtitlewidth) + 2px);
+    overflow: hidden;
+    position:sticky;
+    transition: height 2s;
+    left: var(--daytitlewidth) ;
+
+ }
+.RowTitle{
+    width: calc( 100% - 1px );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    border-right: 1px solid rgb(55, 55, 55);
+    border-top: 1px solid black;
+}
+.RowTitle:nth-child(1){
+    border-top: 1px solid lightblue;
+}
+
+.RowTitle>*{
+    user-select: none;
+}
+
+.RowTitle.Vertical{
+    writing-mode:vertical-rl;
+}
+.RowTitle.Vertical>*{
+    transform: rotateZ(180deg);
+}

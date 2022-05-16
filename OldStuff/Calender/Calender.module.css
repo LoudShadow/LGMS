@@ -1,0 +1,108 @@
+
+.Calender{
+    
+    height: 90%;
+    width: 90%;
+    background-color: whitesmoke;
+    overflow: scroll;
+}
+.CalenderInner{
+    margin-top: 1em;
+    position: relative;
+}
+
+.Right{
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left: 4em;
+}
+
+.DayWrapper{
+    padding-top: 1.5em;
+}
+
+.Day{
+    display: flex;
+    align-items: stretch;
+    width: fit-content;
+
+}
+.DayTitle{
+    width: calc(2em - 2px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+
+    position: sticky;
+    left: 0;
+    z-index: 6;
+
+    background-color: lightblue;
+    border: 1px solid lightblue;
+
+    writing-mode:vertical-rl;
+}
+.DayTitle>* {
+    user-select: none;
+    transform: rotateZ(180deg);
+}
+
+
+.RoomWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+}
+
+
+
+
+
+
+.item{
+    color:rgb(255, 255, 255);
+    border-radius: 0.25em;
+    top:0%;
+    bottom: 0;
+    z-index: 5;
+    position:absolute;
+    user-select: none;
+}
+.sizable{
+    z-index: 100;
+}
+.item.sizable::after ,
+.item.sizable::before{
+    position:absolute;
+    content: "";
+    display: block;
+    width: 40px;
+    height:80%;
+    top: calc(50% - 40%);
+}
+
+.item.sizable::after{
+    right: -43px;
+    cursor: e-resize;
+    border-left: 3px solid black;
+}
+.item.sizable::before{
+    left: -43px;
+    cursor: w-resize;
+    border-right: 3px solid black;
+}
+
+.item.dragging::after ,
+.item.dragging::before{
+    width: max( 300px, 300% );
+    height: 500px;
+    top: calc(-250px + 50%);
+    left: calc(min( -150px, -150% ) + 50%);
+    border: none;
+    /* background-color: rebeccapurple; */
+}

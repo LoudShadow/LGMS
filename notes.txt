@@ -1,0 +1,102 @@
+Planns for the time table it should
+
+Be fully reusable
+
+
+
+Take an array of activites, start time, end time
+	
+	Have a non-modifable one
+	Have a modifiable one	
+	
+activites => (On click)
+
+
+
+
+each row has (day,id,item)   e.g Monday Studio
+every day has one or more ids
+
+each item has
+	name 
+	 --Description--
+	start time    (cannot cross days)
+	end time      (cannot corss days)
+	Code
+
+
+<Calender item>
+
+
+<Calender
+	style={{}}
+	getDay={ func()  	
+>
+</Calender>
+
+
+Class
+
+Scheducles are site specific
+	- Specific  -handes sing changes  Future spcific should have the same start and end time as the scedule
+	---
+	-
+	-	General tired sturcture
+	-
+	----
+?? = optional
+
+Site info
+	name
+	address
+	rooms
+	
+	Schedules
+	
+every room has 
+	dimentions
+	
+Class type
+	name 
+	description
+	
+	acceptable rooms / capacity per site
+	default equipment list
+		Setup lists, rooms and types e.g SATURDAY_B
+		images and Picutres
+
+Every calss has
+	class type (bodypump etc...)
+	Start time
+	end time
+	Room ID 
+	??Instructir ids
+	??Custom equipment list / schedule if different 
+	
+	
+Calenders job
+	Take a selection of classes start times, rooms , etc and sort them into an orgnised format
+	
+Editable Calenders job
+	Takes a selction of classes. New optioanl classes, allow the user to edit them and return a result on save
+	
+	
+	
+Gettibg better
+	Idntify n row in a room and adjust
+	Move between rows
+	have standard sizes small med large
+		
+	
+	
+More indepth :
+	Full height if can
+	Order by id
+	
+	Move between rows
+	
+	Add new elements
+	
+	everything can be built form that core functionality
+	
+	{drag and rop nested}

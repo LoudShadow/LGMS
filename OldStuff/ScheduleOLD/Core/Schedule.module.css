@@ -1,0 +1,26 @@
+.Schedule{
+    
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    overflow: hidden;
+    margin-top: 1em;
+    position:relative;
+}
+
+.Background{
+    position:sticky;
+    top:0;
+    bottom: 0;
+    width: fit-content;
+    margin-left: 4em;
+}
+
+.DayWrapper{
+    padding-top: 1.5em;
+    width: fit-content;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}

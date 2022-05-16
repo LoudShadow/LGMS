@@ -1,0 +1,38 @@
+.Day{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+
+}
+.Day:nth-child(2n)
+    {
+        background: rgba(100,100,100,0.3)
+    }
+.DayTitle{
+    width: calc(2em - 2px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+
+    position: sticky;
+    left: 0;
+    z-index: 6;
+
+    background-color: lightblue;
+    border: 1px solid lightblue;
+
+    writing-mode:vertical-rl;
+}
+.DayTitle>* {
+    user-select: none;
+    transform: rotateZ(180deg);
+}
+.RoomWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: calc(100% - 2em);
+}

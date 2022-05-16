@@ -1,0 +1,48 @@
+.Day{
+    display: flex;
+    border-top: 1px solid black;
+}
+.Day:nth-child(2n)
+    {
+        background: rgba(100,100,100,0.3)
+    }
+.DayTitle{
+    width: calc( var(--daytitlewidth) - 1px );
+    min-height: 5em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+
+    position: sticky;
+    left: 0;
+    z-index: 6;
+
+    background-color: lightblue;
+    border-right: 1px solid black;
+
+}
+.DayTitle.Vertical{
+    writing-mode:vertical-rl;
+}
+.DayTitle.Vertical>* {
+    user-select: none;
+    transform: rotateZ(180deg);
+}
+
+
+.RoomWrapper{
+    display: flex;
+    flex-direction: column;
+}
+.Filler{
+    width: calc( var(--rowtitlewidth) - 1px );
+    height: 100%;
+    background-color: rgba(100,100,100,0.3);
+    border-right: 1px solid black;
+    position:sticky;
+    left: var(--daytitlewidth) ;
+
+
+}

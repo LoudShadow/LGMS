@@ -1,0 +1,21 @@
+.timeWrapper{
+    height: 1.5em;
+    background-color: whitesmoke;
+    width: fit-content;
+
+    color: black;
+    margin-left: -4em;
+    padding-left: 8em;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+
+    position:sticky;
+    top:0px
+}
+.timeLabels{
+    transform: translateX(-50%);
+    user-select: none;
+}
+

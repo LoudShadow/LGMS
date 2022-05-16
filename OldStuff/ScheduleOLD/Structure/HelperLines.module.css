@@ -1,0 +1,33 @@
+.vertLineWrapper{
+        margin-left: -4em;
+        padding-left: 4em;
+        display: flex;
+        flex-direction: row;
+        z-index: 5;
+    
+        position:sticky;
+        top:0px
+    }
+.LineLabels{
+    position: relative;
+    transform: translateX(-50%);
+
+}
+.LineLabels:before{
+    height: 100vh;
+    content: "";
+    display: block;
+    border-left:1px dashed rgb(55, 55, 55);
+    position:absolute;
+    top: 100%;
+    left: 50%;
+}
+.LineLabels:after{
+    height: 100vh;
+    content: "";
+    display: block;
+    border-left:0.5px dotted rgb(155, 155, 155);
+    position:absolute;
+    top: 100%;
+    left: 100%;
+}

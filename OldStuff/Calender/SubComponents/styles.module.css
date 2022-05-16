@@ -1,0 +1,54 @@
+.timeWrapper{
+    height: 1.5em;
+    background-color: whitesmoke;
+    color: black;
+    margin-left: -4em;
+    padding-left: 4em;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+
+    position:sticky;
+    top:0px
+}
+.timeLabels{
+    transform: translateX(-50%);
+}
+
+.vertLineWrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+
+}
+.vertLine{
+    height: 100%;
+    border-right:1px solid black;
+}
+
+
+
+.Row{
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.RowTitle{
+    width: calc(2em - 2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    z-index: 6;
+    writing-mode:vertical-rl;
+    position: sticky;
+    left: 2em;
+}
+.RowTitle>*{
+    user-select: none;
+    transform: rotateZ(180deg);
+}

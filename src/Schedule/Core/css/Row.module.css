@@ -1,0 +1,14 @@
+.Row{
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    z-index: auto;
+    left: 0px;
+    border-top:1px solid black;
+    cursor: all-scroll;
+    width: calc(100% + var(--daytitlewidth));
+}
+
+.Row:nth-child(1){
+    border-top: 1px solid #F5F5F5;
+}

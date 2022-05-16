@@ -1,0 +1,45 @@
+.Room{
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    border-top:1px solid black;
+    cursor: all-scroll;
+}
+.Room:before{
+    display: block;
+    width: auto;
+}
+.RoomTitle{
+    width: calc(2em - 2px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    border: 1px solid lightblue;
+    border-right: 1px solid rgb(55, 55, 55);
+    z-index: 6;
+    position: sticky;
+    left: 2em;
+}
+.RoomTitle:before{
+    width: 100vw;
+    content: "";
+    display: block;
+    position:absolute;
+    top: -1px;
+    left: 0px;
+}
+
+.RoomTitle>*{
+    user-select: none;
+}
+
+.RoomTitle.Vertical{
+    writing-mode:vertical-rl;
+}
+.RoomTitle.Vertical>*{
+    transform: rotateZ(180deg);
+}
