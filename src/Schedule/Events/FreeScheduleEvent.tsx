@@ -23,7 +23,8 @@ interface ScheduleItemProps {
   ];
 
 function FreeScheduleEvent(props: ScheduleItemProps) {
-
+    console.log(props);
+    
     const {
         startMinute,
         minuteWidth,

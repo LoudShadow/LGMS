@@ -61,6 +61,7 @@ function ScheduleEvent(props: ScheduleItemProps) {
         if (props.functions.getLastMoved()!== props.data.id){
             setDragging(false);
             setSelected(false);
+        }else{
             props.functions.clearLastMoved();
         }
     },[]);
@@ -154,7 +155,8 @@ function ScheduleEvent(props: ScheduleItemProps) {
 
     return (
         <div
-            className={style.item
+            className={
+                style.item
                 +" "+(hovered?style.hovered:"")
                 +" "+(selected?style.selected:"")
                 +" "+(dragging?style.dragging:"")}
@@ -166,7 +168,7 @@ function ScheduleEvent(props: ScheduleItemProps) {
             bottom: (100 - (100 / props.totalRows) * (props.rowNumber + 1)) + '%'
             }}
             onMouseMove={moveItem}
-            onMouseLeave={(e)=>{sethovered(0);handleDragEnd(e);setSelected(false);}}
+            onMouseLeave={(e)=>{console.log("leaving");sethovered(0);handleDragEnd(e);setSelected(false);}}
             onMouseDown={handleDragStart}
             onMouseUp={(e)=>{handleDragEnd(e);setSelected(e=>!e)}}
             
@@ -185,6 +187,7 @@ function ScheduleEvent(props: ScheduleItemProps) {
                 lineHeight: 1.1,
                 fontSize: rowHeight * timeSize / 25 + "px",
             }}
+            data-testid="time"
             >
             {floorTime(props.data.start, 5).toLocaleTimeString([], {
                 hour: "2-digit",

@@ -1,4 +1,4 @@
-import {timeToString,floorTime,SameDay,Overlap} from '../time';
+import {timeToString,floorTime,SameDay,Overlap, TimeAtstart} from '../time';
 
 describe('timeToString',()=>{
     test ('time to string converts time correctly',()=>{
@@ -60,7 +60,7 @@ describe('overlap',()=>{
         const end2= new Date(0,0,0,4,0,0);
         expect(Overlap(start1,end1,start2,end2)).toBeFalsy();
     })
-    test ('works on non touching times',()=>{
+    test ('works on touching times',()=>{
         const start1= new Date(0,0,0,1,0,0);
         const end1= new Date(0,0,0,2,0,0);
         const start2= new Date(0,0,0,2,0,0);
@@ -81,4 +81,17 @@ describe('overlap',()=>{
         const end2= new Date(0,0,0,2,0,0);
         expect(Overlap(start1,end1,start2,end2)).toBeTruthy();
     })
+})
+
+describe('Time at start',()=>{
+    test('Works on start anyway',()=>{
+        const start= new Date(2022,2,4,0,0,0);
+        expect(TimeAtstart(start)).toEqual(start);
+    })
+    test('Works on start anyway',()=>{
+        const start= new Date(2022,2,4,0,6,0);
+        const expected= new Date(2022,2,4,0,0,0);
+        expect(TimeAtstart(start)).toEqual(expected);
+    })
+
 })
